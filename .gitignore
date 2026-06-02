@@ -1,0 +1,33 @@
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# SQL Server / SSMS files
+*.mdf
+*.ldf
+*.ndf
+*.bak
+*.trn
+*.sqlproj.user
+Backup/
+Restore/
+
+# Local/Temp files
+*.log
+*.tmp
+*.temp
+query_results.csv
+query_results.xlsx

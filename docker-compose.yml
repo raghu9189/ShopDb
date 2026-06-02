@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: shopdb_sqlserver
+    # Force platform to linux/amd64 for compatibility with Apple Silicon (M1/M2/M3) Macs
+    platform: linux/amd64
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=SqlPracticePass123!
+    volumes:
+      - mssql_data:/var/opt/mssql
+      # Mount the workspace directory to easily access SQL scripts from inside the container
+      - .:/workspace
+
+volumes:
+  mssql_data:
